@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+  <div id="app" class="container-fluid">
     <HelloI18n />
   </div>
 </template>
@@ -13,6 +12,12 @@ export default {
   components: {
     HelloI18n,
   },
+  created() {
+    const locale = localStorage.getItem("locale");
+    if (locale) {
+      this.$i18n.locale = locale;
+    }
+  },
 };
 </script>
 
@@ -21,8 +26,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

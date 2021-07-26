@@ -1,0 +1,6 @@
+{
+  "exampleText": "Dies ist nur ein Beispieltext, um Vue i18n zu testen.",
+  "goodMorning": "Guten Morgen",
+  "goodbye": "Auf wiedersehen",
+  "hello": "Hallo"
+}
