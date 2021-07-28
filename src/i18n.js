@@ -3,6 +3,56 @@ import VueI18n from "vue-i18n";
 
 Vue.use(VueI18n);
 
+const numberFormats = {
+  en: {
+    currency: {
+      style: "currency",
+      currency: "USD",
+    },
+  },
+  es: {
+    currency: {
+      style: "currency",
+      currency: "COP",
+    },
+  },
+  de: {
+    currency: {
+      style: "currency",
+      currency: "EUR",
+    },
+  },
+  nb: {
+    currency: {
+      style: "currency",
+      currency: "NOK",
+    },
+  },
+};
+
+const setDateTimeFormats = {
+  short: {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  },
+  long: {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long",
+  },
+};
+
+const dateTimeFormats = {
+  en: setDateTimeFormats,
+  "en-GB": setDateTimeFormats,
+  es: setDateTimeFormats,
+  de: setDateTimeFormats,
+  eo: setDateTimeFormats,
+  nb: setDateTimeFormats,
+};
+
 function loadLocaleMessages() {
   const locales = require.context(
     "./locales",
@@ -24,4 +74,6 @@ export default new VueI18n({
   locale: process.env.VUE_APP_I18N_LOCALE || "en",
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "en",
   messages: loadLocaleMessages(),
+  dateTimeFormats: dateTimeFormats,
+  numberFormats: numberFormats,
 });

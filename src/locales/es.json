@@ -2,5 +2,7 @@
   "exampleText": "Esto es simplemente un texto de ejemplo para probar Vue i18n.",
   "goodMorning": "Buenos días",
   "goodbye": "Adiós",
-  "hello": "Hola"
+  "hello": "Hola {name}",
+  "language": "{count} idioma | {count} idiomas",
+  "namePrompt": "Escriba su nombre aquí:"
 }

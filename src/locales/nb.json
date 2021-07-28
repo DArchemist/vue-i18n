@@ -2,5 +2,7 @@
   "exampleText": " Dette er bare en eksempeltekst for å teste Vue i18n.",
   "goodMorning": "God morgen",
   "goodbye": "Ha det bra",
-  "hello": "Hei"
+  "hello": "Hei {name}",
+  "language": "{count} språk | {count} språk",
+  "namePrompt": "Skriv navnet ditt her:"
 }

@@ -2,5 +2,7 @@
   "exampleText": "This is just an example text to test Vue i18n.",
   "goodMorning": "Good morning",
   "goodbye": "Goodbye",
-  "hello": "Hello"
+  "hello": "Hello {name}",
+  "language": "{count} language | {count} languages",
+  "namePrompt": "Type your name here:"
 }
